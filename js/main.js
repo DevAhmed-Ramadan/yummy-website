@@ -17,7 +17,7 @@ window.onpopstate = function () {
 
 let yummyImg = document.querySelector('.yummy-image')
 yummyImg.addEventListener('click', function () {
-    location.pathname = './index.html'
+    window.open('./index.html' , "_self");
     sidebarlinks.animate({ top: "300px" }, 0)
     $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
     $('.sidebar-show i.fa-x').hide();
@@ -30,7 +30,8 @@ yummyImg.addEventListener('click', function () {
 let categorieAnchor = document.querySelector('span#categories');
 categorieAnchor.addEventListener('click', () => {
     // window.open('categories.html', '_self');
-    location.pathname = './categories.html'
+    window.open('./categories.html' , "_self");
+    // location.pathname = './categories.html'
     sidebarlinks.animate({ top: "300px" }, 0)
     $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
     $('.sidebar-show i.fa-x').hide();
@@ -41,7 +42,7 @@ categorieAnchor.addEventListener('click', () => {
 let searchAnchor = document.querySelector('#search1');
 searchAnchor.addEventListener("click", function () {
     // window.open('search.html', "_self")
-    location.pathname = './search.html'
+    window.open('./search.html' , "_self")
     sidebarlinks.animate({ top: "300px" }, 0)
     $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
     $('.sidebar-show i.fa-x').hide();
@@ -51,7 +52,8 @@ searchAnchor.addEventListener("click", function () {
 let areaAnchor = document.querySelector('#area')
 if (areaAnchor != null) {
     areaAnchor.addEventListener('click', function () {
-        location.pathname = './Area.html'
+        // location.pathname = './Area.html'
+        window.open('./Area.html' , "_self")
         sidebarlinks.animate({ top: "300px" }, 0)
         $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
         $('.sidebar-show i.fa-x').hide();
@@ -62,7 +64,8 @@ if (areaAnchor != null) {
 let ingredientsAnchor = document.querySelector('#ingredients')
 if (ingredientsAnchor != null) {
     ingredientsAnchor.addEventListener('click', function () {
-        location.pathname = './Ingredients.html'
+        // location.pathname = './Ingredients.html'
+        window.open('./Ingredients.html' , "_self")
         sidebarlinks.animate({ top: "300px" }, 0)
         $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
         $('.sidebar-show i.fa-x').hide();
@@ -73,7 +76,7 @@ if (ingredientsAnchor != null) {
 let contacAnchor = document.querySelector('#contact-us');
 if (contacAnchor != null) {
     contacAnchor.addEventListener('click', function () {
-        location.pathname = './contact-us.html'
+        window.open('./contact-us.html' , "_self")
         sidebarlinks.animate({ top: "300px" }, 0)
         $(".sidebar").animate({ left: -sidebarInnerWidth }, 500);
         $('.sidebar-show i.fa-x').hide();
