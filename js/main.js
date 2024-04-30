@@ -721,47 +721,60 @@ let ageRegex = /^(?:0*[1-9][0-9]*)$/;
 let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
 let nameInput = document.querySelector('#nameInput');
-nameInput.addEventListener('input', function () {
-    isValidInputField(nameRegex, this);
-    // enableSubmit();
-});
+if (nameInput != null) {
+    nameInput.addEventListener('input', function () {
+        isValidInputField(nameRegex, this);
+        // enableSubmit();
+    });
+}
 
 let emailInput = document.querySelector('#emailInput'); // Added missing id selector
-emailInput.addEventListener('input', function () {
-    isValidInputField(emailRegex, this);
-    // enableSubmit();
-});
+if (emailInput != null) {
+    emailInput.addEventListener('input', function () {
+        isValidInputField(emailRegex, this);
+        // enableSubmit();
+    });
+}
+
 
 let phoneInput = document.querySelector('#phoneInput'); // Added missing id selector
-phoneInput.addEventListener('input', function () {
-    isValidInputField(phoneNumberRegex, this)
-    // enableSubmit();
-});
+if (phoneInput != null) {
+    phoneInput.addEventListener('input', function () {
+        isValidInputField(phoneNumberRegex, this)
+        // enableSubmit();
+    });
+}
 
 let ageInput = document.querySelector('#ageInput');
-ageInput.addEventListener('input', function () {
-    isValidInputField(ageRegex, this);
-    // enableSubmit();
-});
+if (ageInput != null) {
+    ageInput.addEventListener('input', function () {
+        isValidInputField(ageRegex, this);
+        // enableSubmit();
+    });
+}
 
 let passwordInput = document.querySelector('#passwordInput');
-passwordInput.addEventListener('input', function () {
-    isValidInputField(passwordRegex, this);
-    // enableSubmit();
-});
+if (passwordInput != null) {
+    passwordInput.addEventListener('input', function () {
+        isValidInputField(passwordRegex, this);
+        // enableSubmit();
+    });
+}
 
 let repasswordInput = document.querySelector('#repasswordInput');
-repasswordInput.addEventListener('input', function () {
-    passwordMatch(passwordInput, this);
-    enableSubmit()
-});
+if (repasswordInput != null) {
+    repasswordInput.addEventListener('input', function () {
+        passwordMatch(passwordInput, this);
+        enableSubmit()
+    });
 
+}
 let submitBtn = document.querySelector('#submitBtn');
 
 function isValidInputField(regex, element) {
     if (regex.test(element.value)) {
         element.nextElementSibling.classList.replace('d-block', 'd-none');
-        
+
         return true;
     } else {
         element.nextElementSibling.classList.replace('d-none', 'd-block');
@@ -784,8 +797,10 @@ function passwordMatch(element1, element2) {
     }
 }
 
-submitBtn.disabled = true;
+if (submitBtn != null) {
 
+    submitBtn.disabled = true;
+}
 function enableSubmit() {
     if (
         isValidInputField(nameRegex, nameInput) &&
