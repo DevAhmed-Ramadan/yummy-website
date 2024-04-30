@@ -1,0 +1,206 @@
+:root
+{
+    --main-black-color:#0D0D0D;
+}
+
+body
+{
+    background-color: var(--main-black-color);
+    overflow: hidden;
+}
+.sidebar
+{
+    top: 0;
+    bottom: 0;
+    left: -256.562px;
+    display: flex;
+    z-index: 999;
+}
+
+#loading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    z-index: 999999;
+    color: white;
+}
+
+.sidebar .sidebar-inner
+{
+    background-color: var(--main-black-color);
+    padding: 24px;
+}
+.sidebar .sidebar-inner span
+{
+    position: relative;
+    top: 300px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: all .5s ease-in ;
+    cursor: pointer;
+}
+.sidebar .sidebar-show
+{
+    background-color: white;
+    padding: 24px 8px;
+}
+.sidebar .sidebar-show-icon i
+{
+    cursor: pointer;
+    font-size: 17px;
+}
+.sidebar .sidebar-show i.fa-bars
+{
+    cursor: pointer;
+    font-weight: 900;
+    position: relative;
+    display: block;
+}
+.sidebar .sidebar-show i.fa-x
+{
+    display: none;
+    cursor: pointer;
+}
+.sidebar .sidebar-show i.fa-bars::after
+{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 11.3px;
+    width: 28px;
+    height: 4px;
+    border-radius: 63px;
+    background-color: #212529;
+}
+
+.meal-box
+{
+    overflow: hidden;
+}
+.meal-box,
+.meal-box .layer
+{
+    cursor: pointer;
+}
+.meal-box .layer
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.662);
+    transform: translateY(100%);
+    transition: all .5s;
+}
+
+.meal-box:hover .layer
+{
+    transform: translateY(0);
+}
+
+.meal-box .layer h1
+{
+    font-size: calc(1.3rem + .6vw);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+input.form-control::placeholder
+{
+    color: gray;
+    font-size: medium;
+}
+.form-control:focus
+{
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.yummy-image
+{
+    cursor: pointer;
+}
+
+
+
+/* ================================== Area Style ====================== */
+
+.area-div
+{
+    cursor: pointer;
+    
+}
+
+
+
+/* ======================  Categories style  ============== */
+
+.categorie-Paragragh
+{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+.meal-img-box
+{
+    overflow: hidden;
+}
+
+.meal-img-box,
+.meal-img-box .layer1
+{
+    cursor: pointer;
+}
+
+.meal-img-box .layer1
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #f9f6f6ca;
+    transform: translateY(100%);
+    transition: all .5s;
+    color: black;
+    flex-direction: column;
+}
+
+.meal-img-box:hover .layer1
+{
+    transform: translateY(0);
+}
+
+.meal-img-box .layer1 h1
+{
+    font-size: calc(1.3rem + .6vw);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+.categorie-Paragragh
+{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
